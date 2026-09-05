@@ -1,5 +1,7 @@
 # **Custom Performance Monitor and Frame Rate Manager for Unity**
 
+*<img width="2096" height="1194" alt="Demo" src="https://github.com/user-attachments/assets/0b1f5200-0518-4e87-8c1f-2e433b52a3d9" />
+
 A lightweight, ultra-fast, and high-precision performance monitoring and frame rate management system designed specifically for Unity projects (2021.3+ / 2022.3+ / 2023+).
 
 Built with zero dynamic memory allocation in mind, this package provides real-time telemetry for FPS, frametime, memory, and hardware specs without CPU overhead or Garbage Collector spikes.
@@ -142,21 +144,6 @@ Handles frame rate limits and VSync settings across desktop, mobile, and WebGL p
 
 \*Created for Unity Asset Store compatibility.
 
-# **Table of Contents**
-
-[Custom Performance Monitor and Frame Rate Manager for Unity	1](#heading=)
-
-[🌟 Key Features	1](#heading=)
-
-[📁 Package Structure	1](#heading=)
-
-[🚀 Quick Start Guide	2](#heading=)
-
-[💻 Script Reference & API	2](#heading=)
-
-[🛠️ Performance Considerations	3](#heading=)
-
-[📜 Credits & Licensing Notice	3](#heading=)
 
 # **🇪🇸 Versión en Español:Monitor de Rendimiento Personalizado y Gestor de Cuadros para Unity**
 
@@ -295,21 +282,6 @@ Gestiona los límites de cuadros por segundo y configuraciones de VSync en plata
 
 ---
 
-*Documentación creada para compatibilidad con la Unity Asset Store.*
+*Documentación creada para compatibilidad con la Unity Asset Store.
 
-# **Indice de temas**
-
-[🇪🇸 Versión en Español:Monitor de Rendimiento Personalizado y Gestor de Cuadros para Unity	4](#heading=)
-
-[🌟 Características Principales	4](#heading=)
-
-[📁 Estructura del Paquete	4](#heading=)
-
-[🚀 Guía de Inicio Rápido	5](#heading=)
-
-[💻 Referencia de Scripts y API	5](#heading=)
-
-[🛠️ Consideraciones de Rendimiento	6](#heading=)
-
-[📜 Créditos y Licencia	6](#heading=)
 
