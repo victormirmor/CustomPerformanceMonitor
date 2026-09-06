@@ -1,5 +1,5 @@
-<img width="1366" height="768" alt="Capture" src="https://github.com/user-attachments/assets/0e63a0de-22bb-4e78-918f-96b714540187" />
 # **Custom Performance Monitor and Frame Rate Manager for Unity**
+<img width="1366" height="768" alt="Capture" src="https://github.com/user-attachments/assets/c96714d6-0b7a-4f9a-9738-c90a8f325c43" />
 
 *<img width="2096" height="1194" alt="Demo" src="https://github.com/user-attachments/assets/0b1f5200-0518-4e87-8c1f-2e433b52a3d9" />
 
