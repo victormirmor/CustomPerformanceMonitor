@@ -10,7 +10,7 @@ public class rotacion : MonoBehaviour{
     private void Update()
     {
 
-        Vector3 Rotation=new Vector3(rotationSpeed.x,rotationSpeed.y,0f);
+        Vector3 Rotation=new Vector3(0f,rotationSpeed.x,rotationSpeed.y);
 
         transform.Rotate(Rotation * Time.deltaTime);
     }
