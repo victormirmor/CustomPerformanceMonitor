@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Alba_Delantal
+  m_Controller: {fileID: 9100000, guid: ca70ec266d1b768abb94ce08f628018f, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 4881852749616254670, guid: 0999e2a09214a23049112f21aba9b814, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: 11d8bb4a7e30cf00f964c496b57c8216, type: 2}
+  - m_OriginalClip: {fileID: 699096754818204509, guid: 0999e2a09214a23049112f21aba9b814, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: c29140b7b9d8a26f09f84faebee7c8f4, type: 2}
