@@ -4,48 +4,74 @@ using MiJuego.InputAdaptador;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMove : MonoBehaviour
 {
-    const string AXIS_HORIZONTAL = "Horizontal";
-    const string AXIS_VERTICAL = "Vertical";
+    public enum PlayerIndex
+    {
+        Player1,
+        Player2
+    }
+
+    [Header("Player Identifier")]
+    public PlayerIndex playerIndex = PlayerIndex.Player1;
 
     [Header("Movement Settings")]
-    public float moveSpeed = 4f;
-    public float rotationSpeed = 10f; // Velocidad con la que gira para orientarse
+    public float walkSpeed = 4f;
+    public float runSpeed = 7f;
+    public float rotationSpeed = 10f;
     public float gravity = -9.81f;
 
     private CharacterController controller;
-    PlayerAnimation playerAnimation;
+    private PlayerAnimation playerAnimation;
     private float verticalVelocity;
 
     void Awake()
     {
         controller = GetComponent<CharacterController>();
-        playerAnimation= GetComponent<PlayerAnimation>();
+        playerAnimation = GetComponent<PlayerAnimation>();
     }
 
     void Update()
     {
-        float h = CrossPlatformInputManager.GetAxis(AXIS_HORIZONTAL);
-        float v = CrossPlatformInputManager.GetAxis(AXIS_VERTICAL);
+        Vector2 inputVector = Vector2.zero;
+        bool isRunPressed = false;
 
-        MoveAndRotate(h, v);
+        // Selección de ejes y botones según el Player seleccionado
+        switch (playerIndex)
+        {
+            case PlayerIndex.Player1:
+                inputVector = CrossPlatformInputManager.GetMovement();
+                isRunPressed = CrossPlatformInputManager.GetButtonDown("Run1") || CrossPlatformInputManager.GetButtonDown("Fire1");
+                break;
+
+            case PlayerIndex.Player2:
+                inputVector = CrossPlatformInputManager.GetRotation();
+                isRunPressed = CrossPlatformInputManager.GetButtonDown("Run2") || CrossPlatformInputManager.GetButtonDown("Fire2");
+                break;
+        }
+
+        MoveAndRotate(inputVector.x, inputVector.y, isRunPressed);
     }
 
-    void MoveAndRotate(float h, float v)
+    void MoveAndRotate(float h, float v, bool isRunPressed)
     {
-        // 1. Obtener dirección de movimiento en base a los ejes de entrada
+        // 1. Obtener dirección de movimiento
         Vector3 inputDirection = new Vector3(h, 0f, v).normalized;
+        bool isMoving = inputDirection.magnitude >= 0.1f;
 
-        // 2. Si hay input, orientar suavemente el personaje hacia esa dirección
-        if (inputDirection.magnitude >= 0.1f)
+        // 2. Determinar si corre y la velocidad aplicada
+        bool isRunning = isMoving && isRunPressed;
+        float currentSpeed = isRunning ? runSpeed : walkSpeed;
+
+        // 3. Orientación progresiva hacia el vector de entrada
+        if (isMoving)
         {
             Quaternion targetRotation = Quaternion.LookRotation(inputDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
 
-        // 3. Dirección de movimiento en el mundo
-        Vector3 moveDirection = inputDirection * moveSpeed;
+        // 4. Dirección de movimiento en el mundo
+        Vector3 moveDirection = inputDirection * currentSpeed;
 
-        // 4. Aplicar gravedad para mantenerlo pegado al suelo
+        // 5. Aplicar gravedad constante
         if (controller.isGrounded && verticalVelocity < 0)
         {
             verticalVelocity = -2f;
@@ -57,10 +83,13 @@ public class PlayerMove : MonoBehaviour
 
         moveDirection.y = verticalVelocity;
 
-        // 5. Mover el CharacterController
+        // 6. Aplicar movimiento mediante CharacterController
         controller.Move(moveDirection * Time.deltaTime);
 
-        // 6. Controlar la animación
-        playerAnimation.PlayAnim(h,v);
+        // 7. Enviar parámetros al Animator
+        if (playerAnimation != null)
+        {
+            playerAnimation.PlayAnim(h, v, isRunning);
+        }
     }
 }

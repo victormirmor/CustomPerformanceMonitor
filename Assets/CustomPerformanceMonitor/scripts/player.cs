@@ -37,7 +37,16 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""rotate_left"",
+                    ""name"": ""rotation"",
+                    ""type"": ""Value"",
+                    ""id"": ""a48b321f-92c1-4f7a-b428-d6defb5180db"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Run1"",
                     ""type"": ""Button"",
                     ""id"": ""bc46a78b-5dc3-439c-86a2-4669fadb2262"",
                     ""expectedControlType"": ""Button"",
@@ -46,7 +55,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""rotate_right"",
+                    ""name"": ""Run2"",
                     ""type"": ""Button"",
                     ""id"": ""28014b15-887d-4895-83f5-5edb289e3645"",
                     ""expectedControlType"": ""Button"",
@@ -81,17 +90,6 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""a15856d5-2373-40ca-ad50-9c5ff0b3571f"",
-                    ""path"": ""<Linux::GameSirG7Pro>/Hat"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""g7"",
                     ""action"": ""move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -174,68 +172,13 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""flechas"",
-                    ""id"": ""ca30450f-c59d-45aa-bef6-938ef87f6fc4"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""84dd8ee8-169a-4b1e-a40a-d4fb5c50ebc0"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""keyboard"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""afa88387-a408-48d8-8396-8daa48c3f61f"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""keyboard"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""c9f4e670-729e-4bf5-8e0f-69763213f463"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""keyboard"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""40c8f474-e6a5-42b5-aa2c-6d2d58da4d00"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""keyboard"",
-                    ""action"": ""move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""026eecd8-2989-4e4d-8820-f4513b6c78ae"",
                     ""path"": ""<DualShockGamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""rotate_left"",
+                    ""action"": ""Run1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -246,18 +189,18 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""rotate_left"",
+                    ""action"": ""Run1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""63910a31-d0ce-461c-ab07-26dd09136220"",
-                    ""path"": ""<XInputController>/leftShoulder"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""rotate_left"",
+                    ""action"": ""Run1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -268,7 +211,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""keyboard"",
-                    ""action"": ""rotate_left"",
+                    ""action"": ""Run1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -279,7 +222,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""g7"",
-                    ""action"": ""rotate_left"",
+                    ""action"": ""Run1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -290,7 +233,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""rotate_right"",
+                    ""action"": ""Run2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -301,18 +244,18 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""rotate_right"",
+                    ""action"": ""Run2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""df281077-5f40-49f4-bb2b-4c335e3c1cb2"",
-                    ""path"": ""<XInputController>/rightShoulder"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
-                    ""action"": ""rotate_right"",
+                    ""action"": ""Run2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -323,7 +266,7 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""keyboard"",
-                    ""action"": ""rotate_right"",
+                    ""action"": ""Run2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -334,14 +277,14 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""g7"",
-                    ""action"": ""rotate_right"",
+                    ""action"": ""Run2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""e8186459-e71d-4a5a-a69c-264fa426bb24"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""gamepad"",
@@ -436,6 +379,83 @@ public partial class @Player: IInputActionCollection2, IDisposable
                     ""action"": ""Fire2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""568b216a-996f-42cb-802f-145ce27b9238"",
+                    ""path"": ""<Linux::GameSirG7Pro>/Hat"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""g7"",
+                    ""action"": ""rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""104b00b6-393e-4e9c-9368-914a139407ff"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""gamepad"",
+                    ""action"": ""rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""flechas"",
+                    ""id"": ""0788df85-fd78-4a2d-86c3-12b11bf739bd"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""rotation"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""a79080f9-b31e-4afc-af7b-9dc289759a58"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""1c7ddf2f-c2fe-4b3e-a8c4-2730aa552fbd"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""6c8c12a2-ee0b-4829-9b1f-3c3dc6188035"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""781ee27e-97e7-4e10-8e3a-f72da0525990"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""keyboard"",
+                    ""action"": ""rotation"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -1109,8 +1129,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
         // movement
         m_movement = asset.FindActionMap("movement", throwIfNotFound: true);
         m_movement_move = m_movement.FindAction("move", throwIfNotFound: true);
-        m_movement_rotate_left = m_movement.FindAction("rotate_left", throwIfNotFound: true);
-        m_movement_rotate_right = m_movement.FindAction("rotate_right", throwIfNotFound: true);
+        m_movement_rotation = m_movement.FindAction("rotation", throwIfNotFound: true);
+        m_movement_Run1 = m_movement.FindAction("Run1", throwIfNotFound: true);
+        m_movement_Run2 = m_movement.FindAction("Run2", throwIfNotFound: true);
         m_movement_Fire1 = m_movement.FindAction("Fire1", throwIfNotFound: true);
         m_movement_Fire2 = m_movement.FindAction("Fire2", throwIfNotFound: true);
         // UI
@@ -1187,8 +1208,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_movement;
     private List<IMovementActions> m_MovementActionsCallbackInterfaces = new List<IMovementActions>();
     private readonly InputAction m_movement_move;
-    private readonly InputAction m_movement_rotate_left;
-    private readonly InputAction m_movement_rotate_right;
+    private readonly InputAction m_movement_rotation;
+    private readonly InputAction m_movement_Run1;
+    private readonly InputAction m_movement_Run2;
     private readonly InputAction m_movement_Fire1;
     private readonly InputAction m_movement_Fire2;
     public struct MovementActions
@@ -1196,8 +1218,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
         private @Player m_Wrapper;
         public MovementActions(@Player wrapper) { m_Wrapper = wrapper; }
         public InputAction @move => m_Wrapper.m_movement_move;
-        public InputAction @rotate_left => m_Wrapper.m_movement_rotate_left;
-        public InputAction @rotate_right => m_Wrapper.m_movement_rotate_right;
+        public InputAction @rotation => m_Wrapper.m_movement_rotation;
+        public InputAction @Run1 => m_Wrapper.m_movement_Run1;
+        public InputAction @Run2 => m_Wrapper.m_movement_Run2;
         public InputAction @Fire1 => m_Wrapper.m_movement_Fire1;
         public InputAction @Fire2 => m_Wrapper.m_movement_Fire2;
         public InputActionMap Get() { return m_Wrapper.m_movement; }
@@ -1212,12 +1235,15 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @move.started += instance.OnMove;
             @move.performed += instance.OnMove;
             @move.canceled += instance.OnMove;
-            @rotate_left.started += instance.OnRotate_left;
-            @rotate_left.performed += instance.OnRotate_left;
-            @rotate_left.canceled += instance.OnRotate_left;
-            @rotate_right.started += instance.OnRotate_right;
-            @rotate_right.performed += instance.OnRotate_right;
-            @rotate_right.canceled += instance.OnRotate_right;
+            @rotation.started += instance.OnRotation;
+            @rotation.performed += instance.OnRotation;
+            @rotation.canceled += instance.OnRotation;
+            @Run1.started += instance.OnRun1;
+            @Run1.performed += instance.OnRun1;
+            @Run1.canceled += instance.OnRun1;
+            @Run2.started += instance.OnRun2;
+            @Run2.performed += instance.OnRun2;
+            @Run2.canceled += instance.OnRun2;
             @Fire1.started += instance.OnFire1;
             @Fire1.performed += instance.OnFire1;
             @Fire1.canceled += instance.OnFire1;
@@ -1231,12 +1257,15 @@ public partial class @Player: IInputActionCollection2, IDisposable
             @move.started -= instance.OnMove;
             @move.performed -= instance.OnMove;
             @move.canceled -= instance.OnMove;
-            @rotate_left.started -= instance.OnRotate_left;
-            @rotate_left.performed -= instance.OnRotate_left;
-            @rotate_left.canceled -= instance.OnRotate_left;
-            @rotate_right.started -= instance.OnRotate_right;
-            @rotate_right.performed -= instance.OnRotate_right;
-            @rotate_right.canceled -= instance.OnRotate_right;
+            @rotation.started -= instance.OnRotation;
+            @rotation.performed -= instance.OnRotation;
+            @rotation.canceled -= instance.OnRotation;
+            @Run1.started -= instance.OnRun1;
+            @Run1.performed -= instance.OnRun1;
+            @Run1.canceled -= instance.OnRun1;
+            @Run2.started -= instance.OnRun2;
+            @Run2.performed -= instance.OnRun2;
+            @Run2.canceled -= instance.OnRun2;
             @Fire1.started -= instance.OnFire1;
             @Fire1.performed -= instance.OnFire1;
             @Fire1.canceled -= instance.OnFire1;
@@ -1408,8 +1437,9 @@ public partial class @Player: IInputActionCollection2, IDisposable
     public interface IMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnRotate_left(InputAction.CallbackContext context);
-        void OnRotate_right(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
+        void OnRun1(InputAction.CallbackContext context);
+        void OnRun2(InputAction.CallbackContext context);
         void OnFire1(InputAction.CallbackContext context);
         void OnFire2(InputAction.CallbackContext context);
     }

@@ -9,7 +9,9 @@ AnimatorOverrideController:
   m_Name: Alba_Delantal
   m_Controller: {fileID: 9100000, guid: ca70ec266d1b768abb94ce08f628018f, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 4881852749616254670, guid: 0999e2a09214a23049112f21aba9b814, type: 3}
-    m_OverrideClip: {fileID: 7400000, guid: 11d8bb4a7e30cf00f964c496b57c8216, type: 2}
-  - m_OriginalClip: {fileID: 699096754818204509, guid: 0999e2a09214a23049112f21aba9b814, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 1b6285674bdb6718685ac1bf092f30bc, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: c29140b7b9d8a26f09f84faebee7c8f4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5a76288fc3122d3cebbe9456648147b8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 11d8bb4a7e30cf00f964c496b57c8216, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 86ae85e57fd4d931797d6e069ee0a62f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4d4d23c013d5584aabd9198bbfe49b08, type: 2}

@@ -20,9 +20,19 @@ namespace MiJuego.InputAdaptador
             }
         }
 
+        public static Vector2 GetMovement()
+        {
+            return Actions.movement.move.ReadValue<Vector2>();
+        }
+
+        public static Vector2 GetRotation()
+        {
+            return Actions.movement.rotation.ReadValue<Vector2>();
+        }
+
         public static float GetAxis(string axisName)
         {
-            Vector2 moveVector = Actions.movement.move.ReadValue<Vector2>();
+            Vector2 moveVector = GetMovement();
 
             switch (axisName)
             {
@@ -43,16 +53,21 @@ namespace MiJuego.InputAdaptador
             switch (buttonName)
             {
                 case "Fire1":
-                    return Actions.movement.Fire1.WasPressedThisFrame();
+                    return Actions.movement.Fire1.IsPressed();
 
                 case "Fire2":
-                    return Actions.movement.Fire2.WasPressedThisFrame();
+                    return Actions.movement.Fire2.IsPressed();
+
+                case "Run1":
                 case "Left":
-                    return Actions.movement.rotate_left.WasPressedThisFrame();
+                    return Actions.movement.Run1.IsPressed();
+
+                case "Run2":
                 case "Right":
-                    return Actions.movement.rotate_right.WasPressedThisFrame();
+                    return Actions.movement.Run2.IsPressed();
+
                 case "Cancel":
-                    return Actions.UI.Cancel.WasPressedThisFrame();
+                    return Actions.UI.Cancel.IsPressed();
 
                 default:
                     Debug.LogWarning($"El botón '{buttonName}' no está mapeado en el adaptador.");
