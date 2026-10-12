@@ -84,17 +84,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "3c20462f-5e78-496f-937c-934bb72187db",
-                    "path": "<Linux::GameSirG7Pro>/Stick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "gamepad",
-                    "action": "move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "wasd",
                     "id": "521c2b45-f6e4-4b46-a385-0f2610879623",
                     "path": "2DVector",
@@ -184,22 +173,22 @@
                 },
                 {
                     "name": "",
-                    "id": "117a3e9f-0adf-4706-9e9d-46edf38c7ee3",
-                    "path": "<Keyboard>/q",
+                    "id": "3ea0f41b-b889-4259-9c25-b3dad963207a",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard",
+                    "groups": "gamepad",
                     "action": "Run1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "b54fccfc-e9fe-45f3-a559-f8f94b1bba8a",
-                    "path": "<Linux::GameSirG7Pro>/Select",
+                    "id": "117a3e9f-0adf-4706-9e9d-46edf38c7ee3",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
-                    "groups": "g7",
+                    "groups": "keyboard",
                     "action": "Run1",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -239,22 +228,22 @@
                 },
                 {
                     "name": "",
-                    "id": "f4f7dc75-3d88-4aac-b7a6-2eb6cdbed906",
-                    "path": "<Keyboard>/e",
+                    "id": "722a9b9f-ad21-4cfc-a561-da7e17317a20",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "keyboard",
+                    "groups": "gamepad",
                     "action": "Run2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "022aafae-e937-4432-9124-05b52d482339",
-                    "path": "<Linux::GameSirG7Pro>/Start",
+                    "id": "f4f7dc75-3d88-4aac-b7a6-2eb6cdbed906",
+                    "path": "<Keyboard>/ctrl",
                     "interactions": "",
                     "processors": "",
-                    "groups": "g7",
+                    "groups": "keyboard",
                     "action": "Run2",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -355,17 +344,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Fire2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "568b216a-996f-42cb-802f-145ce27b9238",
-                    "path": "<Linux::GameSirG7Pro>/Hat",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "g7",
-                    "action": "rotation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -902,7 +880,7 @@
                     "path": "<DualShockGamepad>/select",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "gamepad",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -913,7 +891,7 @@
                     "path": "<SwitchProControllerHID>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "gamepad",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -935,7 +913,18 @@
                     "path": "<Gamepad>/select",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "gamepad",
+                    "action": "Cancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b4582c3-dd28-442e-8df4-0a41f0fa0651",
+                    "path": "<Gamepad>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

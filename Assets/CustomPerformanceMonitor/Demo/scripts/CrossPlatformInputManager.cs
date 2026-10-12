@@ -48,7 +48,7 @@ namespace MiJuego.InputAdaptador
             }
         }
 
-        public static bool GetButtonDown(string buttonName)
+        public static bool GetButton(string buttonName)
         {
             switch (buttonName)
             {
@@ -68,6 +68,33 @@ namespace MiJuego.InputAdaptador
 
                 case "Cancel":
                     return Actions.UI.Cancel.IsPressed();
+
+                default:
+                    Debug.LogWarning($"El botón '{buttonName}' no está mapeado en el adaptador.");
+                    return false;
+            }
+        }
+
+         public static bool GetButtonDown(string buttonName)
+        {
+            switch (buttonName)
+            {
+                case "Fire1":
+                    return Actions.movement.Fire1.WasPressedThisFrame();
+
+                case "Fire2":
+                    return Actions.movement.Fire2.WasPressedThisFrame();
+
+                case "Run1":
+                case "Left":
+                    return Actions.movement.Run1.WasPressedThisFrame();
+
+                case "Run2":
+                case "Right":
+                    return Actions.movement.Run2.WasPressedThisFrame();
+
+                case "Cancel":
+                    return Actions.UI.Cancel.WasPressedThisFrame();
 
                 default:
                     Debug.LogWarning($"El botón '{buttonName}' no está mapeado en el adaptador.");

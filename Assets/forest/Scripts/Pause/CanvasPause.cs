@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections; 
 using UnityEngine.SceneManagement;
+using MiJuego.InputAdaptador;
 using UnityEngine.UI;
 
 #if UNITY_EDITOR
@@ -15,6 +16,7 @@ public class CanvasPause : MonoBehaviour {
 
 	void Awake(){
     gamanager = UnityEngine.Object.FindAnyObjectByType<GameManager>();
+	CursorTrue();
     }
 
 	void Start(){
@@ -22,14 +24,14 @@ public class CanvasPause : MonoBehaviour {
 		Time.timeScale = 1;
 	}
 	void Update(){
-		if (Input.GetButtonDown ("Cancel")){
+		if (CrossPlatformInputManager.GetButton ("Cancel")){
 			Pause();
 			}	
 	}
 	public void Pause(){		
 		canvasPausa.enabled = !canvasPausa.enabled;
 		Time.timeScale = Time.timeScale == 0 ? 1 : 0;
-		Cursor.visible = !Cursor.visible;
+		CursorTrue();
 	}
 
 	

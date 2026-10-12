@@ -463,6 +463,7 @@ GameObject:
   - component: {fileID: 2418916455318770102}
   - component: {fileID: 1330538040723994507}
   - component: {fileID: 4719624767964676800}
+  - component: {fileID: 682567666712647762}
   m_Layer: 0
   m_Name: Alba_Blue_delantal
   m_TagString: Alba
@@ -550,7 +551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerIndex: 1
   walkSpeed: 4
-  runSpeed: 7
+  runSpeed: 6
   rotationSpeed: 10
   gravity: -9.81
 --- !u!114 &4719624767964676800
@@ -565,6 +566,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e453114ec6db85d3a73b5d5502d8f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &682567666712647762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334623830255500722}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8d076a9d1abf74bacd4807c6eb1af3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Distancia_a_seguir: {x: 0, y: 6, z: -6}
+  smoothSpeed: 1
+  RotateX: 45
+  RotateY: 10
+  Main: {fileID: 0}
 --- !u!1 &2546583785320518274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,7 +1887,7 @@ Transform:
   m_GameObject: {fileID: 7417380537600206065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.38, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

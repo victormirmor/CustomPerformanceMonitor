@@ -39,12 +39,12 @@ public class PlayerMove : MonoBehaviour
         {
             case PlayerIndex.Player1:
                 inputVector = CrossPlatformInputManager.GetMovement();
-                isRunPressed = CrossPlatformInputManager.GetButtonDown("Run1") || CrossPlatformInputManager.GetButtonDown("Fire1");
+                isRunPressed = CrossPlatformInputManager.GetButton("Run1") || CrossPlatformInputManager.GetButton("Fire1");
                 break;
 
             case PlayerIndex.Player2:
                 inputVector = CrossPlatformInputManager.GetRotation();
-                isRunPressed = CrossPlatformInputManager.GetButtonDown("Run2") || CrossPlatformInputManager.GetButtonDown("Fire2");
+                isRunPressed = CrossPlatformInputManager.GetButton("Run2") || CrossPlatformInputManager.GetButton("Fire2");
                 break;
         }
 

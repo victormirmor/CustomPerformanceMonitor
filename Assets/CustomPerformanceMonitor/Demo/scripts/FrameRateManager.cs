@@ -9,12 +9,16 @@ public class FrameRateManager : MonoBehaviour
         #if UNITY_IOS || UNITY_ANDROID
             SetFrameRate(60); // Evita gastar batería excesiva
         #else
-            SetFrameRateFromDropdown(0); // Opción: VSync Activado por defecto
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = 75;
         #endif
     }
 
     public void SetFrameRateFromDropdown(int dropdownIndex)
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = -1;
+
         switch (dropdownIndex)
         {
             case 0: // Opción: VSync Activado (Ideal para WebGL o monitores de 75Hz/144Hz)
@@ -54,10 +58,6 @@ public class FrameRateManager : MonoBehaviour
         Application.targetFrameRate = fps;
     }
 
-    /// <summary>
-    /// Registra mensajes en la consola de Unity únicamente durante la ejecución dentro del Editor.
-    /// Este método y sus llamadas asociadas se remueven de forma automática durante el proceso de Build.
-    /// </summary>
     [Conditional("UNITY_EDITOR")]
     private void LogEditor(string message)
     {
